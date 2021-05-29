@@ -1,17 +1,17 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <img src="https://cdn2.iconfinder.com/data/icons/crane-1/500/vab810_12_construction_crane_excavator_isometric_cartoon_business_car-512.png">
+    <UnderConstruction />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import UnderConstruction from "./components/UnderConstruction";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    UnderConstruction
   }
 }
 </script>
