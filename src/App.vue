@@ -1,28 +1,46 @@
 <template>
-  <div id="app">
-    <img src="https://cdn2.iconfinder.com/data/icons/crane-1/500/vab810_12_construction_crane_excavator_isometric_cartoon_business_car-512.png">
-    <UnderConstruction />
-  </div>
+  <v-app id="app" style="height:500px">
+    <span class="bg"></span>
+    <v-container
+        fill-height
+        fluid
+    >
+      <v-row
+        justify="center"
+        align="center"
+      >
+        <v-container>
+          <v-card>
+            <h1>Hi there</h1>
+          </v-card>
+        </v-container>
+      </v-row>
+    </v-container>
+  </v-app>
 </template>
 
 <script>
-import UnderConstruction from "./components/UnderConstruction";
-
 export default {
   name: 'App',
-  components: {
-    UnderConstruction
-  }
-}
+
+  components: {},
+
+  data: () => ({
+    //
+  }),
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+
+.bg {
+  width: 110%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url('assets/background.svg') no-repeat;
+  background-size: cover;
 }
 </style>
+
