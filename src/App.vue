@@ -1,6 +1,6 @@
 <template>
   <v-app id="app">
-    <div id="banner" style="height: 100vh">
+    <div id="banner" style="height: 80vh">
       <span class="bg"></span>
       <v-container
           fill-height
@@ -48,7 +48,6 @@
         <v-row
             justify="center"
             align="center"
-
         >
           <v-container>
             <div class="text-center" data-aos="fade-up">
