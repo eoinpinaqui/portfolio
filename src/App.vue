@@ -1,7 +1,7 @@
 <template>
   <v-app id="app">
     <div id="banner" style="height: 80vh">
-      <span class="bg"></span>
+      <span class="bg" style="z-index: 0"></span>
       <v-container
           fill-height
           fluid
@@ -49,18 +49,16 @@
             justify="center"
             align="center"
         >
-          <v-container>
-            <div class="text-center" data-aos="fade-up">
-              <h1>Who am I?</h1>
-              <p style="font-size: 1.25em">I am a final year Computer Science student at Trinity College Dublin with a
-                passion for software
-                engineering.</p>
-              <v-btn class="mt-5 mb-10"
-                     style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)">See my Resume
-              </v-btn>
-              <v-img elevation="10" :src="require('./assets/trinity.jpg')" max-width="1180px" class="mx-auto mb-10"
-                     style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"></v-img>
-            </div>
+          <v-container class="text-center" style="z-index: 1">
+            <h1>Who am I?</h1>
+            <p style="font-size: 1.25em">I am a final year Computer Science student at Trinity College Dublin with a
+              passion for software
+              engineering.</p>
+            <v-btn class="mt-5 mb-10"
+                   style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)">See my Resume
+            </v-btn>
+            <v-img elevation="10" :src="require('./assets/trinity.jpg')" max-width="1180px" class="mx-auto mb-10"
+                   style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"></v-img>
           </v-container>
         </v-row>
       </v-container>
@@ -73,7 +71,7 @@
             align="center"
         >
           <v-container>
-            <v-card class="mx-auto" style="margin-top: 100px">
+            <v-card elevation="10" class="mx-auto" style="margin-top: 100px">
               <v-container>
                 <v-row
                     justify="center"
@@ -82,28 +80,102 @@
                   <div style="width: 100%; text-align: center">
                     <h1 class="mt-10">Work Experience</h1>
                   </div>
-                  <v-timeline style="margin: 1em 3em 3em 3em">
+                  <v-timeline
+                      align-top
+                      dense
+                      class="mb-10 mt-3"
+                      style="max-width: 900px"
+                  >
                     <v-timeline-item
-                        v-for="(year, i) in years"
-                        :key="i"
-                        :color="year.color"
+                        color="pink"
                         small
                     >
-                      <template v-slot:opposite>
-                        <span
-                            :class="`headline font-weight-bold`"
-                            v-text="year.year"
-                        ></span>
-                      </template>
-                      <div class="py-4">
-                        <h2 :class="`headline font-weight-light mb-4`">
-                          {{ year.title }}
-                        </h2>
-                        <div>
-                          {{ year.description }}
-                        </div>
-                      </div>
+                      <v-row class="pt-1">
+                        <v-col cols="3">
+                          <strong>Summer 2021</strong>
+                        </v-col>
+                        <v-col>
+                          <strong>Software Engineering Intern at Stripe</strong>
+                          <div class="text-sm-body-2">
+                            I will be joining Stripe as a Software Engineering Intern on the
+                            Testing Infrastructure team.
+                          </div>
+                        </v-col>
+                      </v-row>
                     </v-timeline-item>
+
+                    <v-timeline-item
+                        color="blue lighten-2"
+                        small
+                    >
+                      <v-row class="pt-1">
+                        <v-col cols="3">
+                          <strong>2020/21 Academic Year</strong>
+                        </v-col>
+                        <v-col>
+                          <strong>Laboratory Demonstrator at Trinity College Dublin</strong>
+                          <div class="text-sm-body-2">
+                            Assisted with the running of online lab sessions, the marking of assignments and the
+                            teaching of ARM assembly language to first-year students.
+                          </div>
+                        </v-col>
+                      </v-row>
+                    </v-timeline-item>
+
+                    <v-timeline-item
+                        color="pink"
+                        small
+                    >
+                      <v-row class="pt-1">
+                        <v-col cols="3">
+                          <strong>Winter 2020</strong>
+                        </v-col>
+                        <v-col>
+                          <strong>Programming Tutor at The Academy of Code</strong>
+                          <div class="text-sm-body-2">
+                            Taught object-oriented programming to primary and secondary school students using the
+                            Processing programming language over Zoom.
+                          </div>
+                        </v-col>
+                      </v-row>
+                    </v-timeline-item>
+
+                    <v-timeline-item
+                        color="blue lighten-2"
+                        small
+                    >
+                      <v-row class="pt-1">
+                        <v-col cols="3">
+                          <strong>Summer 2020</strong>
+                        </v-col>
+                        <v-col>
+                          <strong>Software Development Engineering Intern at Amazon Web Services (AWS)</strong>
+                          <div class="text-sm-body-2">
+                            Made the debugging process simpler for AWS Lambda customers and operators by creating a
+                            Golang Lambda extension that watches for core dumps and uploads them into an S3 bucket for
+                            later inspection and troubleshooting.
+                          </div>
+                        </v-col>
+                      </v-row>
+                    </v-timeline-item>
+
+                    <v-timeline-item
+                        color="pink"
+                        small
+                    >
+                      <v-row class="pt-1">
+                        <v-col cols="3">
+                          <strong>Summer 2019</strong>
+                        </v-col>
+                        <v-col>
+                          <strong>IT Intern at Wexford County Council</strong>
+                          <div class="text-sm-body-2">
+                            Protected over 700 work computers from security threats by managing the automated patch management process, using SolarWinds Patch Manager.
+                          </div>
+                        </v-col>
+                      </v-row>
+                    </v-timeline-item>
+
                   </v-timeline>
                 </v-row>
               </v-container>
@@ -111,6 +183,36 @@
           </v-container>
         </v-row>
       </v-container>
+      <v-footer class="mt-3" style="background-color: #00ff7f; padding-bottom: 50px">
+        <v-container class="text-center">
+          <h1 class="mb-5" style="color: white">Get in touch</h1>
+          <v-row class="text-center">
+            <div class="mx-auto text-center">
+              <v-icon
+                  size="5em"
+                  color="white"
+                  class="mr-10"
+              >
+                mdi-email
+              </v-icon>
+              <v-icon
+                  size="5em"
+                  color="white"
+                  class="mr-10 ml-10"
+              >
+                mdi-linkedin
+              </v-icon>
+              <v-icon
+                  size="5em"
+                  color="white"
+                  class="ml-10"
+              >
+                mdi-github
+              </v-icon>
+            </div>
+          </v-row>
+        </v-container>
+      </v-footer>
     </div>
   </v-app>
 </template>
@@ -175,6 +277,7 @@ export default {
 
 #app {
   font-family: "Roboto", sans-serif;
+  background-color: springgreen;
 }
 
 h1 {
@@ -189,6 +292,7 @@ h2 {
 
 #banner {
   color: black;
+  background-color: springgreen;
 }
 
 #content {
@@ -204,4 +308,5 @@ h2 {
   background: url('assets/background.svg') no-repeat center center;
   background-size: cover;
 }
+
 </style>
