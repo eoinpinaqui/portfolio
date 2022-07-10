@@ -22,6 +22,7 @@
             <v-row
               justify="center"
               align="center"
+              style="margin: 0 0 5em 0;"
             >
               <v-col sm="6">
                 <div>
@@ -31,7 +32,7 @@
                     x-large
                     color="#310049"
                     elevation="10" 
-                    style="font-family: 'Heebo', sans-serif; font-weight: 900; margin: 5em 0;"
+                    style="font-family: 'Heebo', sans-serif; font-weight: 900; margin: 5em 0 2em 0;"
                   >
                   See my Resume
                   </v-btn>
@@ -119,7 +120,7 @@ export default {
 
 h1 {
   font-family: 'Old Standard TT', serif;
-  font-size: calc(100px + 7vw) !important;
+  font-size: calc(100px + 5vw) !important;
 }
 
 h2 {
