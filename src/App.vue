@@ -3,12 +3,10 @@
     <div id="banner" class="bg">
       <v-container
           fill-height
-          fluid
       >
         <v-row
             justify="center"
             align="center"
-            style="z-index: 1"
         >       
           <h1>Eoin Pinaqui</h1>
         </v-row>
@@ -17,42 +15,25 @@
     <div id="content">
       <div class="bg-2">
         <v-container>
-          <div style="text-align: center; margin: 5em;">
+          <div style="text-align: center; margin: 15vh auto;">
             <h2>Who am I?</h2>
-            <v-row
-              justify="center"
-              align="center"
-              style="margin: 0 0 5em 0;"
-            >
-              <v-col sm="6">
-                <div>
-                  <h3>A Master's of Computer Science student passionate about software engineering.</h3>
-                  <v-btn
-                    dark
-                    x-large
-                    color="#310049"
-                    elevation="10" 
-                    style="font-family: 'Heebo', sans-serif; font-weight: 900; margin: 5em 0 2em 0;"
-                  >
-                  See my Resume
-                  </v-btn>
-                </div>
-              </v-col>
-              <v-col sm="6">
-                <v-img
-                  :src="require('./assets/me.jpg')"
-                  width="50%"
-                  style="border-radius: 50%"
-                  max-width="400px"
-                  class="mx-auto mt-lg-10 mb-lg-10"
-                ></v-img>
-              </v-col>
-            </v-row>
+            <div>
+                <h3>A Master's of Computer Science student passionate about software engineering.</h3>
+                <v-btn
+                  dark
+                  x-large
+                  color="#310049"
+                  elevation="10" 
+                  style="font-family: 'Heebo', sans-serif; font-weight: 900; margin: 3em 0;"
+                >
+                See my Resume
+                </v-btn>
+              </div>
           </div>  
         </v-container>
       </div>
       <div class="bg-3">
-        <v-container id="intro" style="width: 100vw;">
+        <v-container>
         <div style="text-align: center; margin: 5em auto;">
           <h2>My Experience</h2>
           <v-container>
@@ -118,6 +99,10 @@ export default {
 
 <style>
 
+* {
+  color: white;
+}
+
 h1 {
   font-family: 'Old Standard TT', serif;
   font-size: calc(100px + 5vw) !important;
@@ -145,19 +130,9 @@ p, li {
   font-size: calc(15px + 0.25vw) !important;
 }
 
-#banner {
-  color: white;
-}
-
-#content {
-  color: white;
-}
-
 .bg {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
-  top: 0;
-  left: 0;
   background: url('assets/background.svg') no-repeat center center;
   background-color: #5b0287;
   background-size: cover;
@@ -165,15 +140,14 @@ p, li {
 .bg-2 {
   width: 100vw;
   height: 100vh;
-  top: 0;
-  left: 0;
   background: url('assets/background-2.svg') no-repeat center center;
   background-color: #2a42ee;
   background-size: cover;
 }
 
 .bg-3 {
-    background-color: #2a42ee;
+  width: 100vw;
+  background-color: #2a42ee;
 }
 
 </style>
