@@ -82,58 +82,8 @@
 </template>
 
 <script>
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-
 export default {
-
-
   name: 'App',
-
-  components: {},
-
-  data: () => ({
-    years: [
-      {
-        color: '#00ffff',
-        title: 'Software Engineering Intern at Stripe',
-        year: 'Summer 2021',
-        description: 'Who knows what the future may hold?!',
-      },
-      {
-        color: '#00ffff',
-        title: 'Laboratory Demonstrator at Trinity College Dublin',
-        year: '2020/21 Academic Year',
-        description: 'Assisted with the running of online lab sessions, the marking of assignments and the ' +
-            'teaching of ARM assembly language to first-year students.',
-      },
-      {
-        color: '#00ffff',
-        title: 'Programming Tutor at The Academy of Code',
-        year: 'Winter 2020',
-        description: 'Taught object-oriented programming to primary and secondary school students using the ' +
-            'Processing programming language over Zoom.',
-      },
-      {
-        color: '#00ffff',
-        title: 'Software Development Engineering Intern at Amazon Web Services (AWS)',
-        year: 'Summer 2020',
-        description: 'Made the debugging process simpler for AWS Lambda customers and operators by creating ' +
-            'a Golang Lambda extension that watches for core dumps and uploads them into an S3 bucket for ' +
-            'later inspection and troubleshooting.',
-      },
-      {
-        color: '#00ffff',
-        title: 'IT Intern at Wexford County Council',
-        year: 'Summer 2019',
-        description: 'Protected over 700 work computers from security threats by managing the automated patch management process, using SolarWinds Patch Manager.',
-      },
-    ],
-  }),
-
-  created() {
-    AOS.init();
-  }
 };
 </script>
 
