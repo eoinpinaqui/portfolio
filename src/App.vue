@@ -33,7 +33,7 @@
                   I am particularly interested in pursuing a software engineering career and have significant internship experience in this field.
               </p>
               <v-btn
-                style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"
+                style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"
                 color="#00ff7f"
               >
                 See my Resume
@@ -135,17 +135,17 @@ export default {
 }
 
 #subtitle {
-  font-size: 2em !important;
+  font-size: 2.5em !important;
   font-weight: 300 !important;
 }
 
 h1 {
-  font-size: 3.5em !important;
+  font-size: 2em !important;
   font-weight: 900 !important;
 }
 
 h2 {
-  font-size: 1.5em !important;
+  font-size: 1.25em !important;
   font-weight: 300 !important;
 }
 
