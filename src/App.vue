@@ -55,27 +55,33 @@
         <h2 class="mb-5" style="color: white; font-weight: 900 !important;">Get in touch</h2>
           <v-row class="text-center">
           <div class="mx-auto text-center">
-            <v-icon
-              x-large
-              color="white"
-              class="mr-10"
-            >
-              mdi-email
-            </v-icon>
-            <v-icon
-              x-large
-              color="white"
-              class="mr-10 ml-10"
-            >
-              mdi-linkedin
-            </v-icon>
-            <v-icon
-              x-large
-              color="white"
-              class="ml-10"
-            >
-              mdi-github
-            </v-icon>
+            <a href="mailto: pinaquie@tcd.ie" target="_blank">
+              <v-icon
+                x-large
+                color="white"
+                class="mr-10"
+              >
+                mdi-email
+              </v-icon>
+            </a>
+            <a href="https://www.linkedin.com/in/eoin-pinaqui/" target="_blank">
+              <v-icon
+                x-large
+                color="white"
+                class="mr-10 ml-10"
+              >
+                mdi-linkedin
+              </v-icon>
+            </a>
+            <a href="https://github.com/eoinpinaqui" target="_blank">
+              <v-icon
+                x-large
+                color="white"
+                class="ml-10"
+              >
+                mdi-github
+              </v-icon>
+            </a>
           </div>
         </v-row>
       </v-container>
@@ -152,6 +158,10 @@ h2 {
 p {
   font-size: 1.25em !important;
   font-weight: 300 !important;
+}
+
+a {
+  text-decoration: none;
 }
 
 </style>
