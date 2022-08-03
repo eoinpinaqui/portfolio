@@ -1,226 +1,312 @@
 <template>
   <v-app id="app">
-    <div id="banner" class="bg">
+    <div id="banner" style="height: 80vh">
+      <span class="bg" style="z-index: 0"></span>
       <v-container
           fill-height
+          fluid
       >
         <v-row
             justify="center"
             align="center"
-        >       
-          <h1>Eoin Pinaqui</h1>
+        >
+          <v-container>
+            <v-card class="mx-auto" max-width="1000px">
+              <v-container>
+                <v-row
+                    justify="center"
+                    align="center"
+                >
+                  <v-col sm="6">
+                    <div class="ml-10">
+                      <h2>Hi there! I'm</h2>
+                      <h1>Eoin Pinaqui.</h1>
+                    </div>
+                  </v-col>
+                  <v-col sm="6">
+                    <v-img
+                        :src="require('./assets/IMG_1834.jpg')"
+                        width="80%"
+                        style="border-radius: 50%"
+                        max-width="600px"
+                        class="mx-auto mt-lg-10 mb-lg-10"
+                    >
+                    </v-img>
+                  </v-col>
+                </v-row>
+              </v-container>
+            </v-card>
+          </v-container>
         </v-row>
       </v-container>
     </div>
-    <div id="content">
-      <div class="bg-2">
-        <v-container>
-          <div style="text-align: center; margin: 15vh auto;">
-            <h2>Who am I?</h2>
-            <div>
-                <h3>A Master's of Computer Science student passionate about software engineering.</h3>
-                <v-btn
-                  dark
-                  x-large
-                  color="#310049"
-                  elevation="10" 
-                  style="font-family: 'Heebo', sans-serif; font-weight: 900; margin: 3em 0;"
+    <div id="content" style="background-color: #00ff7f">
+      <v-container
+          fill-height
+          fluid
+      >
+        <v-row
+            justify="center"
+            align="center"
+        >
+          <v-container class="text-center" style="z-index: 1">
+            <h1>Who am I?</h1>
+            <p style="font-size: 1.25em">I am a final year Computer Science student at Trinity College Dublin with a
+              passion for software
+              engineering.</p>
+            <v-btn class="mt-5 mb-10"
+                   style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)">See my Resume
+            </v-btn>
+            <v-img elevation="10" :src="require('./assets/trinity.jpg')" max-width="1180px" class="mx-auto mb-10"
+                   style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"></v-img>
+          </v-container>
+        </v-row>
+      </v-container>
+      <v-container
+          fill-height
+          fluid
+      >
+        <v-row
+            justify="center"
+            align="center"
+        >
+          <v-container>
+            <v-card elevation="10" class="mx-auto" style="margin-top: 100px">
+              <v-container>
+                <v-row
+                    justify="center"
+                    align="center"
                 >
-                See my Resume
-                </v-btn>
-              </div>
-          </div>  
+                  <div style="width: 100%; text-align: center">
+                    <h1 class="mt-10">Work Experience</h1>
+                  </div>
+                  <v-timeline
+                      align-top
+                      dense
+                      class="mb-10 mt-3"
+                      style="max-width: 900px"
+                  >
+                    <v-timeline-item
+                        color="pink"
+                        small
+                    >
+                      <v-row class="pt-1">
+                        <v-col cols="3">
+                          <strong>Summer 2021</strong>
+                        </v-col>
+                        <v-col>
+                          <strong>Software Engineering Intern at Stripe</strong>
+                          <div class="text-sm-body-2">
+                            I will be joining Stripe as a Software Engineering Intern on the
+                            Testing Infrastructure team.
+                          </div>
+                        </v-col>
+                      </v-row>
+                    </v-timeline-item>
+
+                    <v-timeline-item
+                        color="blue lighten-2"
+                        small
+                    >
+                      <v-row class="pt-1">
+                        <v-col cols="3">
+                          <strong>2020/21 Academic Year</strong>
+                        </v-col>
+                        <v-col>
+                          <strong>Laboratory Demonstrator at Trinity College Dublin</strong>
+                          <div class="text-sm-body-2">
+                            Assisted with the running of online lab sessions, the marking of assignments and the
+                            teaching of ARM assembly language to first-year students.
+                          </div>
+                        </v-col>
+                      </v-row>
+                    </v-timeline-item>
+
+                    <v-timeline-item
+                        color="pink"
+                        small
+                    >
+                      <v-row class="pt-1">
+                        <v-col cols="3">
+                          <strong>Winter 2020</strong>
+                        </v-col>
+                        <v-col>
+                          <strong>Programming Tutor at The Academy of Code</strong>
+                          <div class="text-sm-body-2">
+                            Taught object-oriented programming to primary and secondary school students using the
+                            Processing programming language over Zoom.
+                          </div>
+                        </v-col>
+                      </v-row>
+                    </v-timeline-item>
+
+                    <v-timeline-item
+                        color="blue lighten-2"
+                        small
+                    >
+                      <v-row class="pt-1">
+                        <v-col cols="3">
+                          <strong>Summer 2020</strong>
+                        </v-col>
+                        <v-col>
+                          <strong>Software Development Engineering Intern at Amazon Web Services (AWS)</strong>
+                          <div class="text-sm-body-2">
+                            Made the debugging process simpler for AWS Lambda customers and operators by creating a
+                            Golang Lambda extension that watches for core dumps and uploads them into an S3 bucket for
+                            later inspection and troubleshooting.
+                          </div>
+                        </v-col>
+                      </v-row>
+                    </v-timeline-item>
+
+                    <v-timeline-item
+                        color="pink"
+                        small
+                    >
+                      <v-row class="pt-1">
+                        <v-col cols="3">
+                          <strong>Summer 2019</strong>
+                        </v-col>
+                        <v-col>
+                          <strong>IT Intern at Wexford County Council</strong>
+                          <div class="text-sm-body-2">
+                            Protected over 700 work computers from security threats by managing the automated patch management process, using SolarWinds Patch Manager.
+                          </div>
+                        </v-col>
+                      </v-row>
+                    </v-timeline-item>
+
+                  </v-timeline>
+                </v-row>
+              </v-container>
+            </v-card>
+          </v-container>
+        </v-row>
+      </v-container>
+      <v-footer class="mt-3" style="background-color: #00ff7f; padding-bottom: 50px">
+        <v-container class="text-center">
+          <h1 class="mb-5" style="color: white">Get in touch</h1>
+          <v-row class="text-center">
+            <div class="mx-auto text-center">
+              <v-icon
+                  size="5em"
+                  color="white"
+                  class="mr-10"
+              >
+                mdi-email
+              </v-icon>
+              <v-icon
+                  size="5em"
+                  color="white"
+                  class="mr-10 ml-10"
+              >
+                mdi-linkedin
+              </v-icon>
+              <v-icon
+                  size="5em"
+                  color="white"
+                  class="ml-10"
+              >
+                mdi-github
+              </v-icon>
+            </div>
+          </v-row>
         </v-container>
-      </div>
-      <div class="bg-3">
-        <v-container>
-          <div style="text-align: center; margin: 5em auto;">
-            <v-container>
-              <div>
-                <h2>Education</h2>
-                <div style="text-align: left;">
-                  <p>Due to academic success in my undergraduate degree, I was accepted into the integrated Master in Computer Science (MCS) programme at Trinity College Dublin.</p>
-                  <ul>
-                    <li>Currently awaiting final results for my undergraduate degree.</li>
-                    <li>3rd Year Grade: 1.1 (4.0 GPA Equivalent) - 86% overall and 1st out of 91 students</li>
-                    <li>2nd Year Grade: 1.1 (4.0 GPA Equivalent) - 90% overall and 1st out of 96 students</li>
-                    <li>1st Year Grade: 1.1 (3.98 GPA Equivalent) - 86% overall and 6th out of 100 students</li>
-                  </ul>
-                </div>
-                <v-img
-                    :src="require('./assets/trinity.jpg')"
-                    width="80%"
-                    max-width="800px"
-                    class="mx-auto mt-10 mb-10"
-                ></v-img>
-              </div>
-            </v-container>
-          </div>
-        </v-container>
-      </div>
-      <div class="bg-4">
-        <v-container>
-          <div style="text-align: center;">
-            <v-container>
-              <div>
-                <h2>Experience</h2>
-                <div style="text-align: left;">
-                  <div class="work">
-                    <h3>Software Engineering Intern - Stripe</h3>
-                    <h4>Jan 2022 - Jun 2022</h4>
-                    <ul>
-                      <li>Designed and built a new automatic onboarding process for the Klarna payment method.</li>
-                      <li>Facilitated the rollout of Klarna disputes to over 50,000 connected accounts.</li>
-                      <li>Created automatic alerts and mitigation tools for Klarna manual reconciliation issues.</li>
-                      <li>Main programming languages: Ruby, Java.</li>
-                    </ul>
-                  </div>
-                  <div class="work">
-                    <h3>Part-time Software Developer - Trinity College Dublin Students Union</h3>
-                    <h4>Jun 2021 - Jan 2022</h4>
-                    <ul>
-                      <li>Built a personnel and events management system with a team of three engineers.</li>
-                      <li>Led the design and development of all backend services and the API.</li>
-                      <li>Main programming languages: Golang, VueJS.</li>
-                    </ul>
-                  </div>
-                  <div class="work">
-                    <h3>Software Engineering Intern - Stripe</h3>
-                    <h4>Jun 2021 - Sep 2022</h4>
-                    <ul>
-                      <li>Implemented an autoscaling solution for Stripe's cloud continuous integration (CI) infrastructure.</li>
-                      <li>Beta tested a new internal framework by creating sample projects and providing feedback.</li>
-                      <li>Main programming languages: Ruby.</li>
-                    </ul>
-                  </div>
-                  <div class="work">
-                    <h3>Programming Tutor - Trinity College Dublin & The Academy of Code</h3>
-                    <h4>Sep 2020 - May 2021</h4>
-                    <ul>
-                      <li>Assisted in teaching ARM Assembly Language programming to first-year computer science students as part of the Introduction to Computing module.</li>
-                      <li>Delivered lessons on object-oriented programming and web development to children aged 7 to 16 over Zoom.</li>
-                      <li>Main programming languages: Processing, Java, HTML, CSS, Javascript, ARM Assembly Language.</li>
-                    </ul>
-                  </div>
-                  <div class="work">
-                    <h3>Software Development Engineering Intern - Amazon Web Services (AWS)</h3>
-                    <h4>May 2020 - Sep 2020</h4>
-                    <ul>
-                      <li>Developed sample Lambda extensions in <a style="color: white;" href="https://github.com/aws-samples/aws-lambda-extensions">multiple programming languages</a>.</li>
-                      <li>Main programming languages: Golang, Python, Java.</li>
-                    </ul>
-                  </div>
-                  <div class="work">
-                    <h3>Information Technology Summer Intern - Wexford County Council</h3>
-                    <h4>Jun 2019 - Aug 2019</h4>
-                    <ul>
-                      <li>Managed the automatic patch process for over 700 work computers using SolarWinds Patch Manager.</li>
-                      <li>Assisted in the development of an in-house mobile application for monitoring ring buoys.</li>
-                      <li>Main programming languages: HTML, CSS, Javascript.</li>
-                    </ul>
-                  </div>
-                  <div class="work">
-                    <v-row>
-                      <v-col>
-                        <v-img
-                          :src="require('./assets/stripe.png')"
-                          width="80%"
-                          max-width="800px"
-                          class="mx-auto"
-                        ></v-img>
-                      </v-col>
-                      <v-col>
-                        <v-img
-                          :src="require('./assets/aws.jpg')"
-                          width="80%"
-                          max-width="800px"
-                          class="mx-auto"
-                        ></v-img>
-                      </v-col>
-                    </v-row>
-                  </div>
-                </div>
-              </div>
-            </v-container>
-          </div>   
-        </v-container>
-      </div>
+      </v-footer>
     </div>
   </v-app>
 </template>
 
 <script>
+import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 export default {
+
+
   name: 'App',
+
   components: {},
+
+  data: () => ({
+    years: [
+      {
+        color: '#00ffff',
+        title: 'Software Engineering Intern at Stripe',
+        year: 'Summer 2021',
+        description: 'Who knows what the future may hold?!',
+      },
+      {
+        color: '#00ffff',
+        title: 'Laboratory Demonstrator at Trinity College Dublin',
+        year: '2020/21 Academic Year',
+        description: 'Assisted with the running of online lab sessions, the marking of assignments and the ' +
+            'teaching of ARM assembly language to first-year students.',
+      },
+      {
+        color: '#00ffff',
+        title: 'Programming Tutor at The Academy of Code',
+        year: 'Winter 2020',
+        description: 'Taught object-oriented programming to primary and secondary school students using the ' +
+            'Processing programming language over Zoom.',
+      },
+      {
+        color: '#00ffff',
+        title: 'Software Development Engineering Intern at Amazon Web Services (AWS)',
+        year: 'Summer 2020',
+        description: 'Made the debugging process simpler for AWS Lambda customers and operators by creating ' +
+            'a Golang Lambda extension that watches for core dumps and uploads them into an S3 bucket for ' +
+            'later inspection and troubleshooting.',
+      },
+      {
+        color: '#00ffff',
+        title: 'IT Intern at Wexford County Council',
+        year: 'Summer 2019',
+        description: 'Protected over 700 work computers from security threats by managing the automated patch management process, using SolarWinds Patch Manager.',
+      },
+    ],
+  }),
+
+  created() {
+    AOS.init();
+  }
 };
 </script>
 
 <style>
 
-* {
-  color: white;
+#app {
+  font-family: "Roboto", sans-serif;
+  background-color: springgreen;
 }
 
 h1 {
-  font-family: 'Old Standard TT', serif;
-  font-size: calc(100px + 5vw) !important;
+  font-size: 3.5em !important;
+  font-weight: 900 !important;
 }
 
 h2 {
-  font-family: 'Old Standard TT', serif;
-  font-size: calc(60px + 2vw) !important;
+  font-size: 1.5em !important;
+  font-weight: 300 !important;
 }
 
-h3 {
-  font-family: 'Heebo', sans-serif;
-  font-size: calc(25px + 0.5vw) !important;
-  font-weight: 300;
+#banner {
+  color: black;
+  background-color: springgreen;
 }
 
-h4 {
-  font-family: 'Heebo', sans-serif;
-  font-size: calc(20px + 0.25vw) !important;
-  font-weight: 300;
-}
-
-p, li {
-  font-family: 'Heebo', sans-serif;
-  font-size: calc(15px + 0.25vw) !important;
+#content {
+  color: white;
 }
 
 .bg {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
   background: url('assets/background.svg') no-repeat center center;
-  background-color: #5b0287;
   background-size: cover;
-}
-.bg-2 {
-  width: 100vw;
-  height: 100vh;
-  background: url('assets/background-2.svg') no-repeat center center;
-  background-color: #2a42ee;
-  background-size: cover;
-}
-
-.bg-3 {
-  width: 100vw;
-  height: 100vh;
-  background: url('assets/background-3.svg') no-repeat center center;
-  background-color: #2a42ee;
-  background-size: cover;
-  background-color: #4FACF7;
-}
-
-.bg-4 {
-  background-color: #4FACF7;
-}
-
-.work {
-  margin: 0 0 3em 0;
 }
 
 </style>
