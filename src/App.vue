@@ -109,12 +109,11 @@ export default {
 #content {
   color: black;
   background-color: #00ff7f;
-  margin: 20em 0 0 0;
 }
 
 #banner {
   max-width: 1000px; 
-  margin: 5em auto 15em auto;
+  margin: 5em auto 5em auto;
 }
 
 #intro {
