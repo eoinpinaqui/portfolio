@@ -11,8 +11,10 @@
                 align="center"
                 >
                   <v-col sm="6">
-                    <h2 id="subtitle">Hi there! I'm</h2>
-                    <h1 id="title">Eoin Pinaqui</h1>
+                    <div class="greeting">
+                      <h2 id="subtitle">Hi there! I'm</h2>
+                      <h1 id="title">Eoin Pinaqui</h1>
+                    </div>
                   </v-col>
                   <v-col sm="6">
                     <v-img
@@ -37,10 +39,10 @@
                 See my Resume
               </v-btn>
               <v-img
-                :src="require('./assets/trinity.jpg')" 
+                :src="require('./assets/eoin.jpg')" 
                 elevation="10"
-                max-width="1180px"
-                style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"
+                width="50%"
+                style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); margin: 0 auto;"
                 class="mb-10 mt-10"
               ></v-img>
             </div>
@@ -50,25 +52,25 @@
     </div>
     <v-footer class="mt-3" style="background-color: #00ff7f; padding-bottom: 50px">
       <v-container class="text-center">
-        <h1 class="mb-5" style="color: white">Get in touch</h1>
+        <h2 class="mb-5" style="color: white; font-weight: 900 !important;">Get in touch</h2>
           <v-row class="text-center">
           <div class="mx-auto text-center">
             <v-icon
-              size="5em"
+              x-large
               color="white"
               class="mr-10"
             >
               mdi-email
             </v-icon>
             <v-icon
-              size="5em"
+              x-large
               color="white"
               class="mr-10 ml-10"
             >
               mdi-linkedin
             </v-icon>
             <v-icon
-              size="5em"
+              x-large
               color="white"
               class="ml-10"
             >
@@ -122,13 +124,19 @@ export default {
   text-align: center;
 }
 
+@media (max-width: 700px) {
+  .greeting {
+    text-align: center;
+  }
+}
+
 #title {
-  font-size: 5em !important;
+  font-size: 4em !important;
   font-weight: 900 !important;
 }
 
 #subtitle {
-  font-size: 2.5em !important;
+  font-size: 2em !important;
   font-weight: 300 !important;
 }
 
