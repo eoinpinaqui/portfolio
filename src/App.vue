@@ -32,12 +32,13 @@
               <p>Studying computer science has allowed me to marry my interests in technology, problem-solving and innovation. 
                   I am particularly interested in pursuing a software engineering career and have significant internship experience in this field.
               </p>
-              <v-btn
-                style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"
-                color="#00ff7f"
-              >
-                See my Resume
-              </v-btn>
+                <v-btn
+                  style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"
+                  color="#00ff7f"
+                  @click.prevent="openResume"
+                >
+                  See my Resume
+                </v-btn>
               <v-img
                 :src="require('./assets/eoin.jpg')" 
                 elevation="10"
@@ -92,6 +93,11 @@
 <script>
 export default {
   name: 'App',
+  methods: {
+    openResume() {
+      window.open("/Eoin Pinaqui - Resume.pdf", "_blank").focus();
+    }
+  }
 };
 </script>
 
